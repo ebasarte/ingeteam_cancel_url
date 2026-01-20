@@ -71,12 +71,12 @@
       const texts = {
         'es': { description: '¡Ha ocurrido un error al procesar tu transacción!', info: 'Por favor, vuelve a iniciar el proceso de carga' },
         'en': { description: 'An error occurred while processing your transaction!', info: 'Please restart the charging process' },
-        'fr': { description: 'Une erreur s'est produite lors du traitement de votre transaction!', info: 'Veuillez redémarrer le processus de téléchargement' }
+        'fr': { description: 'Une erreur s’est produite lors du traitement de votre transaction!', info: 'Veuillez redémarrer le processus de charge' }
       };
       const userLang = navigator.language || navigator.languages[0];
       const langCode = userLang.split('-')[0];
       const selectedTexts = texts[langCode] || texts['en'];
-      document.getElementById('description').textContent = selectedTexts.description;;
+      document.getElementById('description').textContent = selectedTexts.description;
       document.getElementById('info').textContent = selectedTexts.info;
     </script>
 </body>
