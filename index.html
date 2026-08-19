@@ -15,37 +15,45 @@
             background-color: #fff5f5;
             color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
         }
+        
         .container {
+            width: 100%;
+            max-width: 400px;
             text-align: center;
             background-color: #ffffff;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+        
         .crossmark {
             font-size: 60px;
             color: #e53935;
             margin-bottom: 20px;
         }
+        
         h1 {
+            margin: 0 0 20px;
             color: #c62828;
-            font-size: 30px;
+            font-size: clamp(24px, 7vw, 30px);
             font-weight: 700;
             line-height: 1.25;
         }
+        
         p {
+            margin: 0;
             color: #000;
-            font-size: 20px;
+            font-size: clamp(17px, 5vw, 20px);
             font-weight: 400;
             line-height: 1.4;
         }
+        
         .button {
             display: inline-block;
             margin-top: 25px;
@@ -53,17 +61,49 @@
             background-color: #e53935;
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             border-radius: 8px;
             transition: background-color 0.3s ease;
         }
+        
         .button:hover {
             background-color: #b71c1c;
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
         }
         footer {
             margin-top: 30px;
             font-size: 14px;
             color: #777;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+        
+            .container {
+                padding: 30px 20px;
+            }
+        
+            .crossmark {
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+        
+            h1 {
+                margin-bottom: 15px;
+            }
+        
+            .button {
+                width: 100%;
+                padding: 14px 20px;
+            }
         }
     </style>
 </head>
