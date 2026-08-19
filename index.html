@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
     <title>Error en el pago</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Inter";
             background-color: #fff5f5;
             color: #333;
             margin: 0;
@@ -33,7 +38,7 @@
             color: #c62828;
         }
         p {
-            font-size: 18px;
+            font-size: 40px;
         }
         .button {
             display: inline-block;
@@ -69,9 +74,9 @@
     </div>
     <script>
       const texts = {
-        'es': { description: '¡Ha ocurrido un error al procesar tu transacción!', info: 'Por favor, vuelve a iniciar el proceso de carga' },
-        'en': { description: 'An error occurred while processing your transaction!', info: 'Please restart the charging process' },
-        'fr': { description: 'Une erreur s’est produite lors du traitement de votre transaction!', info: 'Veuillez redémarrer le processus de charge' }
+        'es': { description: 'Ha ocurrido un error al procesar tu transacción', info: 'Por favor, vuelve a iniciar el proceso de carga' },
+        'en': { description: 'An error occurred while processing your transaction', info: 'Please restart the charging process' },
+        'fr': { description: 'Une erreur s’est produite lors du traitement de votre transaction', info: 'Veuillez redémarrer le processus de charge' }
       };
       const userLang = navigator.language || navigator.languages[0];
       const langCode = userLang.split('-')[0];
