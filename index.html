@@ -23,7 +23,7 @@
         .container {
             width: 100%;
             text-align: center;
-            padding-top: clamp(20px, 12vh, 120px);
+            padding-top: clamp(40px, 12vh, 120px);
         }
         
         img.svg-img {
@@ -35,14 +35,19 @@
         }
         
         h1 {
-            margin: 0 0 20px;
-            color: #c62828;
-            font-size: clamp(24px, 7vw, 30px);
-            font-weight: 700;
-            line-height: 1.25;
+            width: min(658px, calc(100% - 30px));
+            margin: 50px auto 0;
+            color: #000000;
+            text-align: center;
+            font-family: "Inter", sans-serif;
+            font-size: 90px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 0;
         }
         
         p {
+            width: min(658px, calc(100% - 30px));
             margin: 0;
             color: #000;
             font-size: clamp(17px, 5vw, 20px);
