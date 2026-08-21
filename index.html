@@ -12,30 +12,26 @@
     <style>
         body {
             font-family: "Inter", sans-serif;
-            background-color: #fff5f5;
+            background-color: #ffffff;
             color: #333;
             margin: 0;
-            padding: 20px;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
         .container {
             width: 100%;
-            max-width: 400px;
             text-align: center;
-            background-color: #ffffff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding-top: clamp(20px, 12vh, 120px);
         }
         
-        .crossmark {
-            font-size: 60px;
-            color: #e53935;
-            margin-bottom: 20px;
+        img.svg-img {
+            display: block;
+            width: 188px;
+            height: 188px;
+            margin: 0 auto;
+            object-fit: contain;
         }
         
         h1 {
@@ -57,37 +53,34 @@
         /* Ajustes para pantallas pequeñas */
         @media (max-width: 480px) {
             body {
-                padding: 15px;
+                padding-top: 60px;
             }
-        
-            .container {
-                padding: 30px 20px;
-            }
-        
-            .crossmark {
-                font-size: 50px;
-                margin-bottom: 15px;
-            }
-        
-            h1 {
-                margin-bottom: 15px;
+            .svg-img {
+                width: 120px;
+                height: 120px;
             }
 
+            h1 {
+                width: calc(100% - 30px);
+                margin-top: 40px;
+                font-size: clamp(36px, 12vw, 60px);
+                line-height: 1.2;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="crossmark">✗</div>
+        <img class="svg-img" src="ok.svg" alt="Operacion realizada correctamente">
         <h1 id="description"></h1>
         <p id="info"></p>
     </div>
     <script>
       const texts = {
-        'es': { description: 'Ha ocurrido un error al procesar tu transacción', info: 'Por favor, vuelve a iniciar el proceso de carga' },
-        'en': { description: 'An error occurred while processing your transaction', info: 'Please restart the charging process' },
-        'fr': { description: 'Une erreur s’est produite lors du traitement de votre transaction', info: 'Veuillez redémarrer le processus de charge' }
+        'es': { description: 'Error en el proceso de pago', info: 'Por favor vuelve a intentarlo escaneando el QR en el cargador' },
+        'en': { description: 'Payment process error', info: 'Please try again by scanning the QR code on the charger' },
+        'fr': { description: 'Erreur dans le processus de paiement', info: 'Veuillez réessayer en scannant le code QR sur le chargeur' }
       };
       const userLang = navigator.language || navigator.languages[0];
       const langCode = userLang.split('-')[0];
